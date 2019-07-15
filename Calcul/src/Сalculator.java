@@ -60,14 +60,10 @@ public class Сalculator {
                     }
                 }
 
-            } catch (NumberFormatException e) {
+            } catch (Exception e ) {
                 System.out.println("Не верный формат");
                 break;
             }
-              catch (NullPointerException e ) {
-                 System.out.println("Не верный формат");
-                 break;
-             }
 
         }
     }
