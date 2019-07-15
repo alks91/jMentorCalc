@@ -14,9 +14,9 @@ public class Сalculator {
             }
             String[] operandStr = expression.split("[/*+-]");
              try {
-                                                                                                                                    //вот эта длинная трока мне тоже не нравится, я пробовал писать вот такое регулярное выражение ("[XIV]"), но почему то оно не срабатывало
+                                                                                                                                    //вот эта длинная строка мне тоже не нравится, я пробовал писать вот такое регулярное выражение ("[XIV]"), но почему то оно не срабатывало
             if ((expression.contains("I") && expression.contains("V")) || (expression.contains("I") && expression.contains("X")) || (expression.contains("V") && expression.contains("X"))||(expression.contains("V") && expression.contains("V") || (expression.contains("X") && expression.contains("X")) || (expression.contains("I") && expression.contains("I")))) {
-                                                                                                                                    //вообще хотелось бы сделать чтоб была проверка на формат "X+I" с участием символов "X I V", а в остальных случаях выбрасывалось исключение "не верный формат", но я не совсем знаю как это правильно реализовать, только сегодня открыл на javarush 9 уровень в котором говорится об исключениях
+                                                                                                                   
                 if (expression.contains("+")) {
                         System.out.println(Roman.getRomanPlus(operandStr[0], operandStr[1]));
                 }
@@ -60,10 +60,14 @@ public class Сalculator {
                     }
                 }
 
-            } catch (NumberFormatException  NullPointerException ) {
+            } catch (NumberFormatException e) {
                 System.out.println("Не верный формат");
                 break;
             }
+              catch (NullPointerException e ) {
+                 System.out.println("Не верный формат");
+                 break;
+             }
 
         }
     }
