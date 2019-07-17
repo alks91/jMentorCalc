@@ -17,12 +17,10 @@ public class Operations {
         c = a * b;
         return c;
     }
-
+    
     public static int getDevision(int a, int b){
         int c = 0;
         c = a / b;
         return c;
     }
-
-
 }
