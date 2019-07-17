@@ -8,7 +8,6 @@ import java.util.Map;
         public static Map<String, Integer> romanList = new HashMap<String, Integer>();
         static {
 
-
                 romanList.put("I", 1);
                 romanList.put("II", 2);
                 romanList.put("III", 3);
